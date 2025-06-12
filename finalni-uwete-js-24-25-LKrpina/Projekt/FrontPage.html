@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Little Dragon Bookshop</title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        background: lightgrey;
+    }
+    header {
+        background: darkslateblue;
+        font-family: Helvetica sans-serif;
+        color: lightblue;
+        text-align: center;
+    }
+    /* Stilovi za navigaciju*/
+    .Navigation {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: black;;
+    }
+    .brand {
+        display: flex;
+        align-items: center;
+        margin-right: 1rem;
+    }
+    /* DROPDOWN MENU*/
+    .dropbtn {
+        background-color: black;
+        font-family: Helvetica, sans-serif;
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: darkslategray;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-content a:hover {
+        background-color: white;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        scale: 1.05;
+        background-color: darkslategray;
+    }
+
+    .logo{
+        height: 80px;
+        width: auto;
+    }
+    .ime-knjizare {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: lightblue;
+        padding: 20px;
+    }
+    .search {
+        flex: 1;
+        max-width: 500px;
+        display: flex;
+    }
+    .search input {
+        width: 100%;
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px 0 0 4px;
+    }
+    .search button {
+        padding: 8px 15px;
+        background: #f0f0f0;
+        border: 1px solid #ddd;
+        border-left: none;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+    }
+    .Navigation nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .Navigation a {
+        font-family: Helvetica, sans-serif;
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+    .Navigation a:hover {
+        color: #0066ff;
+        background-color: #f0f6ff;
+
+    }
+    /* SLIKE I TEXT KNJIGA */
+
+    .pictures-of-books{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .pictures-of-books img{
+        width: 15vw;
+    }
+    .ime-slike {
+        margin: 0;
+        font-family: garamond, sans-serif;
+        font-size: 16px;
+        max-width: 15vw;
+        align-items: center;
+    }
+    .slika {
+        background: whitesmoke;
+        padding: 5px;
+        border: Black solid 3px;
+        border-radius: 10px;
+    }
+    .slika:hover{
+        transform: scale(1.2);
+        transition: 0.4s;
+    }
+
+    .footer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: darkslateblue;
+        bottom:0;
+    }
+    .footer a {
+        gap: 20px
+    }
+    .logo2{
+        height: 50px;
+        width: auto;
+        gap: 20px;
+    }
+    .logo2:hover{
+        scale: 1.1;
+        transition: 0.4s;
+    }
+</style>
+<body>
+<div class = "Navigation">
+    <div class ="brand">
+        <a href="FrontPage.html">
+            <img src = "slike/little%20dragon.jpg" alt = "logo" class = "logo">
+        </a>
+        <a href="FrontPage.html">
+            <span class = "ime-knjizare">Little Dragon Bookshop</span>
+        </a>
+    </div>
+    <div class = "search">
+        <input type = "text" name = "search" placeholder = "Search for your favourite book">
+        <button>GO</button>
+    </div>
+    <nav>
+        <div class="dropdown">
+            <button class="dropbtn">Book Genres</button>
+            <div class="dropdown-content">
+                <a href="#">Biography</a>
+                <a href="#">Fantasy</a>
+                <a href="#">Historical Fiction</a>
+                <a href="#">Horror</a>
+                <a href="#">Mystery</a>
+                <a href="#">Non-Fiction</a>
+                <a href="#">Romance</a>
+                <a href="#">Science Fiction</a>
+                <a href="#">Thriller</a>
+                <a href="#">Young Adult</a>
+
+            </div>
+        </div>
+        <a href = "Products.html">Accessories</a>
+        <a href = "JoinUs.html">Join us</a>
+        <a href = "AboutUS.html">About Us</a>
+    </nav>
+</div>
+
+<header>
+    <div class = "knjige">
+        <h2>Trending Books</h2>
+    </div>
+</header>
+<div class = "pictures-of-books">
+    <div class = "slika">
+        <img src="slike/Cackle.jpg" alt="Cackle">
+        <p class = "ime-slike">Cackle by Rachel Harrison</p>
+    </div>
+    <div class = "slika">
+        <img src="slike/Dairy%20of%20a%20Poisson%20Master.jpg" alt="Dairy Of a Poison Master">
+        <p class = "ime-slike">Dairy Of a Poison Master by K.Ritz</p>
+    </div>
+    <div class = "slika">
+        <img src="slike/Not%20a%20Speck%20of%20Light.jpg" alt="Not a Speck of Light">
+        <p class = "ime-slike">Not a Speck of Light by Laird Barron</p>
+    </div>
+    <div class = "slika">
+        <img src="slike/The%20Sacred%20Well%20Murders.jpg" alt="The Sacred Well Murders">
+        <p class = "ime-slike">The Sacred Well Murders</p>
+    </div>
+    <div class = "slika">
+        <img src="slike/Wind%20and%20truth.jpg" alt="Wind and Truth">
+        <p class = "ime-slike">Wind and Truth by Brandon Sanderson</p>
+    </div>
+</div>
+<header>
+    <div class = "knjige">
+        <h2>Najnovije knjige</h2>
+    </div>
+</header>
+<div class = "najnovije-knjige">
+    <div class = "pictures-of-books">
+        <div class = "slika">
+            <img src="slike/The%20Secret%20Room.jpg" alt="The Secret Room">
+            <p class = "ime-slike">The Secret Room by Jane Casey</p>
+        </div>
+        <div class = "slika">
+            <img src="slike/King%20of%20Envy.jpg" alt="King Of Envy">
+            <p class = "ime-slike">King of Envy by Ana Huang</p>
+        </div>
+        <div class = "slika">
+            <img src="slike/Great%20Big%20Beautiful%20Life.jpg" alt="Great Big Beautiful Life">
+            <p class = "ime-slike">Great Big Beautiful Life by Emily Henry</p>
+        </div>
+        <div class = "slika">
+            <img src="slike/The%20Tainted%20Khan.jpg" alt="The Tainted Khan">
+            <p class = "ime-slike">The Tainted Khan by Taran Matharu</p>
+        </div>
+        <div class = "slika">
+            <img src="slike/Shadow%20of%20the%20Solstice.jpg" alt="Shadow of the Solstice">
+            <p class = "ime-slike">Shadow of the Solstice by Anne Hillerman</p>
+        </div>
+    </div>
+</div>
+<header>
+    <div class = "knjige">
+        <h2>Najčitanije knjige</h2>
+    </div>
+</header>
+<div class = "najcitanije-knjige">
+    <div class = "pictures-of-books">
+        <div class = "slika">
+            <img src="slike/The%20Hunger%20Games.jpg" alt="The Hunger Games">
+            <p class = "ime-slike">The Hunger Games by Suzanne Collins</p>
+        </div>
+        <div class = "slika">
+            <img src="slike/Harry%20Potter%20and%20the%20Order%20of%20the%20Phoenix.jpg" alt="Harry Potter and the Order of the Phoenix">
+            <p class = "ime-slike">Harry Potter and the Order of the Phoenix by J.K. Rowling</p>
+        </div>
+        <div class = "slika">
+            <img src="slike/Pride%20and%20Prejudice.jpg" alt="Pride and Prejudice">
+            <p class = "ime-slike">Pride and Prejudice by Jane Austen</p>
+        </div>
+        <div class = "slika">
+            <img src="slike/To%20Kill%20a%20Mockingbird.jpg" alt="To Kill a Mockingbird">
+            <p class = "ime-slike">To Kill a Mockingbird by Harper Lee</p>
+        </div>
+        <div class = "slika">
+            <img src="slike/The%20Book%20Thief.jpg" alt="The Book Thief">
+            <p class = "ime-slike">The Book Thief by Markus Zuzak</p>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class = "footer">
+            <a href = "https://www.youtube.com">
+                <img class = "logo2" src = "slike/youtube.jpg" alt = "Youtube">
+            </a>
+            <a href = "https://x.com">
+                <img class = "logo2" src = "slike/x%20logo.jpg" alt = "x/twitter">
+            </a>
+            <a href = "https://www.instagram.com">
+                <img class = "logo2" src = "slike/instagram.jpg" alt = "Instagram">
+            </a>
+            <a href = "https://www.tiktok.com">
+                <img class = "logo2" src = "slike/tiktok.jpg" alt = "Tik Tok">
+            </a>
+    </div>
+</footer>
+</body>
+</html>

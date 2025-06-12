@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Join Us</title>
+    <link rel="stylesheet" href="css/stil1.css">
+    <script src="css/script.js" defer></script>
+
+</head>
+<header>
+<div class = "Navigation">
+    <div class ="brand">
+        <a href="FrontPage.html">
+            <img src = "slike/little%20dragon.jpg" alt = "logo" class = "logo">
+        </a>
+        <a href="FrontPage.html">
+            <span class = "ime-knjizare">Little Dragon Bookshop</span>
+        </a>
+    </div>
+    <div class = "search">
+        <input type = "text" name = "search" placeholder = "Search for your favourite book">
+        <button>GO</button>
+    </div>
+    <nav>
+        <div class="dropdown">
+            <button class="dropbtn">Book Genres</button>
+            <div class="dropdown-content">
+                <a href="#">Biography</a>
+                <a href="#">Fantasy</a>
+                <a href="#">Historical Fiction</a>
+                <a href="#">Horror</a>
+                <a href="#">Mystery</a>
+                <a href="#">Non-Fiction</a>
+                <a href="#">Romance</a>
+                <a href="#">Science Fiction</a>
+                <a href="#">Thriller</a>
+                <a href="#">Young Adult</a>
+
+            </div>
+        </div>
+        <a href = "Products.html">Accessories</a>
+        <a href = "JoinUs.html">Join us</a>
+        <a href = "AboutUS.html">About Us</a>
+    </nav>
+</div>
+    </header>
+<body>
+
+
+<div class="container">
+    <form id="userForm" action="#" method="post" class="forma">
+        <h2>Kontakt Forma</h2>
+
+        <!-- Tekst polja -->
+        <div class="form-group">
+            <label for="ime">Name:</label>
+            <input type="text" id="ime" name="ime" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email adresa:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <!-- Combobox -->
+        <div class="form-group">
+            <label for="grad">Where have you heard from us:</label>
+            <select id="grad" name="grad" required>
+                <option value="">-- Choose --</option>
+                <option value="word">Word of mouth</option>
+                <option value="youtube">Youtube</option>
+                <option value="twitter">Twitter/X</option>
+                <option value="facebook">Facebook</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <!-- Radio buttoni -->
+        <div class="form-group">
+            <label>Spol:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="splo" value="male" required> Male</label>
+                <label><input type="radio" name="spol" value="female"> Female</label>
+            </div>
+        </div>
+
+        <!-- Checkboxovi -->
+        <div class="form-group">
+            <label>Interesi:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="interesi" value="sport"> Sport</label>
+                <label><input type="checkbox" name="interesi" value="muzika"> Muzika</label>
+                <label><input type="checkbox" name="interesi" value="putovanja"> Putovanja</label>
+            </div>
+        </div>
+
+        <!-- Dugme -->
+        <div class="form-group">
+            <button type="submit">Pošalji</button>
+        </div>
+    </form>
+</div>
+
+
+</body>
+<footer>
+    <div class = "footer">
+        <a href = "https://www.youtube.com">
+            <img class = "logo2" src = "slike/youtube.jpg" alt = "Youtube">
+        </a>
+        <a href = "https://x.com">
+            <img class = "logo2" src = "slike/x%20logo.jpg" alt = "x/twitter">
+        </a>
+        <a href = "https://www.instagram.com">
+            <img class = "logo2" src = "slike/instagram.jpg" alt = "Instagram">
+        </a>
+        <a href = "https://www.tiktok.com">
+            <img class = "logo2" src = "slike/tiktok.jpg" alt = "Tik Tok">
+        </a>
+    </div>
+</footer>
+</html>

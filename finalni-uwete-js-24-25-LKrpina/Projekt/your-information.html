@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Vaše Informacije</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f8f8f8;
+      transition: background-color 0.4s ease;
+    }
+    .info-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #0077cc;
+      color: white;
+      font-size: 14px;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="info-box">
+  <h2>Vaše Informacije</h2>
+  <p><strong>Ime:</strong> <span id="ime"></span></p>
+  <p><strong>Email:</strong> <span id="email"></span></p>
+  <p><strong>Grad:</strong> <span id="grad"></span></p>
+  <p><strong>Spol:</strong> <span id="spol"></span></p>
+  <p><strong>Interesi:</strong> <span id="interesi"></span></p>
+
+  <!-- Buttons -->
+  <div class="buttons">
+    <button id="backBtn">Natrag na JoinUs</button>
+    <button id="colorBtn">Promijeni pozadinu</button>
+  </div>
+</div>
+
+<script>
+  // Load data
+  const data = JSON.parse(sessionStorage.getItem("userInfo"));
+
+  if (data) {
+    document.getElementById("ime").textContent = data.ime;
+    document.getElementById("email").textContent = data.email;
+    document.getElementById("grad").textContent = data.grad;
+    document.getElementById("spol").textContent = data.spol;
+    document.getElementById("interesi").textContent = data.interesi.join(", ");
+  } else {
+    document.body.innerHTML = "<h2>Greška: Nema podataka za prikaz.</h2>";
+  }
+
+  // Back button
+  document.getElementById("backBtn").addEventListener("click", function () {
+    window.location.href = "JoinUs.html";
+  });
+
+  // Random background color
+  document.getElementById("colorBtn").addEventListener("click", function () {
+    const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    document.body.style.backgroundColor = randomColor;
+  });
+</script>
+
+</body>
+</html>
