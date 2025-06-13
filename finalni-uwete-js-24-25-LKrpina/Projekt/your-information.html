@@ -48,7 +48,6 @@
   <p><strong>Spol:</strong> <span id="spol"></span></p>
   <p><strong>Interesi:</strong> <span id="interesi"></span></p>
 
-  <!-- Buttons -->
   <div class="buttons">
     <button id="backBtn">Natrag na JoinUs</button>
     <button id="colorBtn">Promijeni pozadinu</button>
@@ -56,7 +55,6 @@
 </div>
 
 <script>
-  // Load data
   const data = JSON.parse(sessionStorage.getItem("userInfo"));
 
   if (data) {
@@ -68,13 +66,10 @@
   } else {
     document.body.innerHTML = "<h2>Greška: Nema podataka za prikaz.</h2>";
   }
-
-  // Back button
   document.getElementById("backBtn").addEventListener("click", function () {
     window.location.href = "JoinUs.html";
   });
 
-  // Random background color
   document.getElementById("colorBtn").addEventListener("click", function () {
     const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
     document.body.style.backgroundColor = randomColor;
